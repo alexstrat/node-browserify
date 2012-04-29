@@ -124,12 +124,13 @@ require.alias = function (from, to) {
     
     for (var i = 0; i < keys.length; i++) {
         var key = keys[i];
-        if (key.slice(0, basedir.length + 1) === basedir + '/') {
-            var f = key.slice(basedir.length);
-            require.modules[to + f] = require.modules[basedir + f];
-        }
-        else if (key === basedir) {
-            require.modules[to] = require.modules[basedir];
+  //    if (key.slice(0, basedir.length + 1) === basedir + '/') {
+  //        var f = key.slice(basedir.length);
+  //        require.modules[to + f] = require.modules[basedir + f];
+  //    }
+  //    else 
+        if (key === res) {
+            require.modules[to] = require.modules[res];
         }
     }
 };
